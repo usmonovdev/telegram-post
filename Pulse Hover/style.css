@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #650dd2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    transition: transform 300ms, background-color 300ms;
+    animation: pulse 500ms;
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.button:active{
+    transform: scale(0.95);
+    animation: none;
+}
+
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 #ebebeb;
+    }
+
+    100%{
+        box-shadow: 0 0 0 12px #ebebeb00;
+    }
+}
+
+.button p{
+    color: #ffcc66;
+    font-size: 80px;
+    position: relative;
+    top: -23px;
+    cursor: default;
+}
