@@ -1,0 +1,13 @@
+.world {
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  width: 400px;
+  height: 400px;
+}
+
+#spaceship {
+  fill: orange;
+  stroke: red;
+  stroke-width: 2px;
+}
