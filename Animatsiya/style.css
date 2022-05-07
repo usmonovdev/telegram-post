@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #650dd2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animatsiya {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  animation: animatsiyaNomi 3s alternate infinite ease;
+  position: relative;
+  left: -200px;
+}
+
+@keyframes animatsiyaNomi {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(400px);
+  }
+}
