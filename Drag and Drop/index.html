@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Drag and drop upload file</title>
+</head>
+<body>
+    <div class="drop-container">
+        <div class="drop">
+            <i class="fa-solid fa-photo-film icon"></i>
+            <span class="text">
+                Ma'lumotlaringizni shu yerga tashlang.
+            </span>
+            <div class="or-con">
+                <span class="line"></span>
+                <span class="or">YOKI</span>
+                <span class="line"></span>
+            </div>
+            <label for="file-upload">Fayl Tanlash</label>
+            <input type="file" id="file-upload" class="file-input" multiple>
+        </div>
+        <div class="progress"></div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

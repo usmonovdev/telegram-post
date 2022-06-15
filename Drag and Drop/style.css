@@ -1,0 +1,80 @@
+body {
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.drop-container {
+  background: #6922c1;
+  padding: 1.5rem;
+  width: 450px;
+  display: inline-block;
+}
+.drop {
+  border: 3px dashed #ffcc66;
+  display: grid;
+  width: 100%;
+  place-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+
+.active {
+  border: 3px solid #fff;
+  background: #ffffff86;
+}
+
+.drop .icon {
+  font-size: 60px;
+  color: #fff;
+}
+.drop .text {
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.progress {
+  background: #fff;
+  width: 0%;
+  height: 20px;
+  display: none;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+.drop label {
+  background: #ffcc66;
+  padding: 0.7rem 1.8rem;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.file-input {
+  display: none;
+}
+
+.line {
+  width: 80px;
+  height: 1px;
+  background: #ffcc66;
+}
+
+.or-con {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.or {
+  margin: 0 1rem;
+  font-weight: 500;
+  color: #fff;
+}
