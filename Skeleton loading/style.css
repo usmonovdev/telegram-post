@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --loading: #f3f3f3;
+    --loading-shiny: #969696a1;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_box {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.img_box img {
+    width: 100%;
+    visibility: hidden;
+}
+
+.loading {
+    position: relative;
+    background: var(--loading);
+    overflow: hidden;
+}
+
+.loading::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--loading-shiny), transparent);
+    transform: translateX(-100%);
+    animation: loading 2s infinite;
+}
+
+@keyframes loading {
+    100% {
+        transform: translateX(200%);
+    }
+}
