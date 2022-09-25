@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #6922c1;
+            overflow: hidden;
+        }
+
+        .box {
+            text-align: center;
+        }
+
+        .box p {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .box input {
+            padding: 6px 10px;
+            outline: none;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .box button {
+            padding: 6px 8px;
+            background-color: #ffcc66;
+            border: 0px;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Matinni Nutq ko'rinishiga o'girish</p>
+        <input placeholder="Matiningizni kiriting" type="text" id="textToSpeech"> <br>
+        <button onclick="speak()">Speak</button>
+    </div>
+
+    <script>
+
+        try {
+            var speech = new SpeechSynthesisUtterance()
+            var SpeechRecognition = SpeechRecognition;
+            var recognition = new SpeechRecognition()
+    
+        } catch(e) {
+            console.error("Web Speech API ushbu devaysda qo'llash imkoni mavjud emas")        
+        }
+    
+        function speak() {
+            speech.text = textToSpeech.value
+            speech.volume = 1
+            speech.rate=1
+            speech.pitch=1
+            window.speechSynthesis.speak(speech)
+        }
+        
+    </script>
+</body>
